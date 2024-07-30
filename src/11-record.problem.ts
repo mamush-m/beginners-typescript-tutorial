@@ -1,7 +1,9 @@
 import { expect, it } from "vitest";
+import { string } from "zod";
 
 const createCache = () => {
-  const cache = {};
+  const cache: Record<string, string> = {
+  };
 
   const add = (id: string, value: string) => {
     cache[id] = value;
